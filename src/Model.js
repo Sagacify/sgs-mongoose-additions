@@ -8,7 +8,7 @@ module.exports = function(mongoose){
 
 	_(mongoose.Model).extend({
 
-		get: function(path, type, options, callback) {
+		get: function(path, options, callback) {
 			var camelizedGetPath = _('get_'+path).camelize();
 			if(typeof this[camelizedGetPath] === 'function'){
 				return this[camelizedGetPath](options, callback);
