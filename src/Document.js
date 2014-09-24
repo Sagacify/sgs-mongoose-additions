@@ -51,6 +51,11 @@ module.exports = function(mongoose){
 				options = (typeof path !== 'string') ? val : {};
 			}
 
+			if(!callback && typeof val === 'function'){
+				callback = val;
+				options = {};
+			}
+
 			if(!callback){
 				return this.mongooseSet.apply(this, arguments);
 			}

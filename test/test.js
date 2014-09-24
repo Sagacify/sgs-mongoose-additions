@@ -40,12 +40,22 @@ describe('Testing the mongoose getset module.', function () {
 		done();
 	});
 
-	it('set from virtual', function(done){
+	it('set string path from virtual', function(done){
 		test.set('attr1', 'cbAttr1AfterSet', {}, function(err){
 			if(err){
 				return done(err);
 			}
 			assert.equal(test.attr1, 'cbAttr1AfterSet');
+			done();
+		});
+	});
+
+	it('set obj path from virtual', function(done){
+		test.set({'attr1': 'cbAttr1AfterSet2'}, function(err){
+			if(err){
+				return done(err);
+			}
+			assert.equal(test.attr1, 'cbAttr1AfterSet2');
 			done();
 		});
 	});
