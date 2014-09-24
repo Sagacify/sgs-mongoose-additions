@@ -60,4 +60,14 @@ describe('Testing the mongoose getset module.', function () {
 		});
 	});
 
+	it('get from model', function(done){
+		mongoose.model('Test').get('attr', {}, function(err, result){
+			if(err){
+				return done(err);
+			}
+			assert.equal(result, 'attr');
+			done();
+		});
+	});
+
 });

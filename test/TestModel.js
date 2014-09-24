@@ -33,4 +33,9 @@ TestSchema.methods.getAttr1 = function(options, callback){
 	callback(null, 'cbAttr1');
 };
 
+TestSchema.statics.getAttr = function(options, callback){
+	callback(null, 'attr');
+};
+
+
 var TestModel = mongoose.model('Test', TestSchema);
