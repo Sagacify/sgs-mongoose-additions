@@ -1,8 +1,8 @@
 {
-	"name": "sgs-mongoose-getset",
+	"name": "sgs-mongoose-additions",
 	"private": true,
 	"version": "0.0.1",
-	"description": "Sagacify's mongoose getset module.",
+	"description": "Sagacify's mongoose additions module.",
 	"main": "src/index.js",
 	"scripts": {
 		"test": "grunt ci --verbose"
@@ -29,11 +29,11 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Sagacify/sgs-mongoose-getset"
+		"url": "https://github.com/Sagacify/sgs-mongoose-additions"
 	},
 	"author": "François Beuvens (https://github.com/fbeuvens)",
 	"bugs": {
-		"url": "https://github.com/Sagacify/sgs-mongoose-getset/issues"
+		"url": "https://github.com/Sagacify/sgs-mongoose-additions/issues"
 	},
-	"homepage": "https://github.com/Sagacify/sgs-mongoose-getset"
+	"homepage": "https://github.com/Sagacify/sgs-mongoose-additions"
 }
