@@ -14,12 +14,17 @@ module.exports = function(mongoose){
 				return this[camelizedGetPath](options, callback);
 			}
 
+			callback('No path ' + path + ' in model');
+		},
+
+		do: function(path, options, callback) {
 			var camelizedPath = _(path).camelize();
 			if(typeof this[camelizedPath] === 'function'){
 				return this[camelizedPath](options, callback);
 			}
-
-			callback('No path ' + path + ' in model');
+			else{
+				callback('No action for ' + camelizedPath);
+			}
 		}
 
 	});

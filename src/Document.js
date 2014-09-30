@@ -30,11 +30,6 @@ module.exports = function(mongoose){
 				return this[camelizedGetPath](options, callback);
 			}
 
-			var camelizedPath = _(path).camelize();
-			if(typeof this[camelizedPath] === 'function'){
-				return this[camelizedPath](options, callback);
-			}
-
 			callback(null, this.mongooseGet.apply(this, arguments));
 		},
 
@@ -76,6 +71,16 @@ module.exports = function(mongoose){
 				callback();
 			}
 
+		},
+
+		do: function(path, options, callback) {
+			var camelizedPath = _(path).camelize();
+			if(typeof this[camelizedPath] === 'function'){
+				return this[camelizedPath](options, callback);
+			}
+			else{
+				callback('No action for ' + camelizedPath);
+			}
 		}
 
 	});
