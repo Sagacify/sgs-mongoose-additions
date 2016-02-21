@@ -1,6 +1,5 @@
 {
 	"name": "sgs-mongoose-additions",
-	"private": true,
 	"version": "1.0.0",
 	"description": "Sagacify's mongoose additions module.",
 	"main": "src/index.js",
@@ -31,7 +30,7 @@
 		"type": "git",
 		"url": "https://github.com/Sagacify/sgs-mongoose-additions"
 	},
-	"author": "François Beuvens (https://github.com/fbeuvens)",
+	"author": "Sagacify",
 	"bugs": {
 		"url": "https://github.com/Sagacify/sgs-mongoose-additions/issues"
 	},
